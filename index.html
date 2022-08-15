@@ -9,7 +9,6 @@
 </head>
 <body>
 
-    <!--------------------------------- NAVBAR ------------------------------------>
     <header>
         <div class="nav-container">
             <nav>
@@ -35,10 +34,6 @@
             </nav>
         </div>
     </header>
-    <!-------------------X------------ NAVBAR ------------X---------------------->
-
-
-    <!------------------------------- HERO SECTION  ----------------------------->
 
     <section id="home" class="hero">
         <div class="hero-container">
@@ -52,17 +47,12 @@
                 <p style="color: white;">Data Analyst, Software Developer</p>
             </div>
             <div class="hero-btns">
-                <a href="#">Resume</a>
+                <a href="resume.pdf" download>Resume</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
     </section>
 
-    <!----------------X------------- HERO SECTION  ----------X----------------->
-
-
-
-    <!------------------------------- ABOUT SECTION  ----------------------------->
 
     <section class="about" id="about">
         <div class="about-me">
@@ -136,12 +126,6 @@
         </div>
     </section>
 
-    <!----------------X------------- ABOUT SECTION  ----------X----------------->
-
-
-
-    <!------------------------------- EDUCATION SECTION  ----------------------------->
-
     <section class="education" id="education">
         <h2>Education</h2>
         <div class="education-card">
@@ -161,13 +145,13 @@
         <div class="education-card">
             <div class="education-card-1">
                 <div class="education-period">
-                    <p>2020 -2024(expected)</p>
-                    <h6>Bachelor's Degree</h6>
+                    <p>2009-2012</p>
+                    <h6>High school diploma</h6>
                 </div>
             </div>
             <div class="education-card-2">
-                <h3>Bachelor's Degree</h3>
-                <small class="small">SENECA COLLEGE</small>
+                <h3>High school diploma</h3>
+                <small class="small">AY Jackson SS</small>
                 <p style="margin-top: 20px;">Under  the supervision of <span>Zijun Li</span></p>
                 <p>Awarded with all scholarships in the world.</p>
             </div>
@@ -175,13 +159,13 @@
         <div class="education-card">
             <div class="education-card-1">
                 <div class="education-period">
-                    <p>2020 -2024(expected)</p>
-                    <h6>Bachelor's Degree</h6>
+                    <p>2007-2009</p>
+                    <h6>Junior High</h6>
                 </div>
             </div>
             <div class="education-card-2">
-                <h3>Bachelor's Degree</h3>
-                <small>SENECA COLLEGE</small>
+                <h3>Junior High</h3>
+                <small>Zion Height</small>
                 <p style="margin-top: 20px;".ed>Under  the supervision of <span>Zijun Li</span></p>
                 <p>Awarded with all scholarships in the world.</p>
             </div>
@@ -190,41 +174,48 @@
 
     </section>
 
-    <!----------------X------------- EDUCATION SECTION  ----------X----------------->
-
-
-
-    <!------------------------------- CONTACT SECTION  ----------------------------->
-
     <section class="contact" id="contact">
         <h2 style="text-align: center;">Contact</h2>
-        <!-- <form> -->
+        <form class="c-form"
+              id="c-form"
+              action="https://httpbin.org/post"
+              method="POST">
             <div style="margin-top: 20px;" class="form-input">
                 <label for="name">Name</label>
                 <input type="text" name="name" placeholder="Enter name" required>
             </div>
             <div class="form-input">
-                <label for="email">Email</label>
-                <input type="mail" name="email" placeholder="Enter email" required>
+                <label for="gender">Gender</label>
+                <select style="width: 60%; height: 40px" name="" id="">
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
             </div>
+            <div class="form-input">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Enter email" required>
+            </div>
+
             <div class="form-input">
                 <label for="city">City</label>
                 <select style="width: 60%; height: 40px" name="" id="">
-                    <option>Ottawa</option>
                     <option>Toronto</option>
+                    <option>Ottawa</option>
                     <option>Vancover</option>
                     <option>Saskatoon</option>
                 </select>
-                <!-- <input type="text" name="city" placeholder="Enter city" required> -->
             </div>
+
             <div class="form-input">
                 <label for="phone">Phone</label>
-                <input id="phone" type="number" name="phone" placeholder="Enter phone">
+                <input id="phone" type="number" name="phone" placeholder="Enter phone" required>
             </div>
             <p style="text-align: center;" id="value2Input"></p>
             <div class="form-input">
                 <label for="code">Postal Code</label>
-                <input type="text" id="code" name="code" placeholder="Enter your postal code" required>
+                <input type="text" id="code" name="code" placeholder="Enter your postal code" pattern="
+      ([ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ])\ ?([0-9][ABCEGHJKLMNPRSTVWXYZ][0-9])"
+                       required>
             </div>
             <p style="text-align: center;" id="valueInput"></p>
             <div class="form-radio">
@@ -249,13 +240,9 @@
             <div class="form-text">
                 <textarea name="message" id="" rows="5"></textarea>
             </div>
-            <button class="btn" onclick="getValueInput()">Button</button>
-        <!-- </form> -->
+            <button class="btn" onclick="getValueInput()">Submit</button>
+        </form>
     </section>
-
-    <!----------------X------------- CONTACT SECTION  ----------X----------------->
-
-
     <script src="./js/main.js"></script>
 </body>
 </html>
